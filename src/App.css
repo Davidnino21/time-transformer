@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #3f3f3f;
+  background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
   font-family: sans-serif;
 }
@@ -19,13 +19,17 @@ body {
 
 h1 {
   padding: 15px;
-    font-size: 50px;
+  font-size: 50px;
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 360px;
+  background-color: #3f3f3f;
+  padding: 16px;
+  border-radius: 15px;
 }
 
 label {
@@ -58,4 +62,11 @@ button:hover {
   background-color: rgb(127, 148, 255);
   transform: translateY(-2px);
   transition: all 0.2s ease;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 38px;
+    text-align: center;
+  }
 }
