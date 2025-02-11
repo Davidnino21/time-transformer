@@ -4,8 +4,8 @@ import "./App.css";
 
 function App() {
   const [time, setTime] = useState("");
-  const [fromZone, setFromZone] = useState("");
-  const [toZone, setToZone] = useState("");
+  const [fromZone, setFromZone] = useState("US/Pacific");
+  const [toZone, setToZone] = useState("Africa/Cairo");
   const [convertedTime, setConvertedTime] = useState("");
 
   const timeZones = moment.tz.names();
@@ -21,7 +21,7 @@ function App() {
         <label>Enter Time:</label>
         <input type="datetime-local" />
         <label>From Time Zone:</label>
-        <select>
+        <select value={fromZone}>
           {timeZones.map((zone) => (
             <option key={zone} value={zone}>
               {zone}
@@ -29,7 +29,7 @@ function App() {
           ))}
         </select>
         <label>To Time Zone:</label>
-        <select>
+        <select value={toZone}>
           {timeZones.map((zone) => (
             <option key={zone} value={zone}>
               {zone}
@@ -41,7 +41,7 @@ function App() {
           <button>Transform</button>
         </div>
         <div>
-          <p>Converted Time:</p>
+          <h3>Converted Time:</h3>
         </div>
       </div>
     </div>
