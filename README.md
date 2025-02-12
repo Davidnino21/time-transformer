@@ -1,8 +1,16 @@
-# React + Vite
+# Time Transformer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Created a time-zone conversion application that allows users to pick different time zones from all over the world and convert times between them.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## User Story
+
+As a traveler across time zones, I want to easily convert times between different time zones so that I can efficiently plan meetings and events.
+
+## Technologies
+
+* React.js
+* CSS
+* JavaScript
+* Moment.js
