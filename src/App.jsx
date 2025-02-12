@@ -3,16 +3,22 @@ import moment from "moment-timezone";
 import "./App.css";
 
 function App() {
-  const [time, setTime] = useState("");
-  const [fromZone, setFromZone] = useState("US/Pacific");
-  const [toZone, setToZone] = useState("Africa/Cairo");
-  const [convertedTime, setConvertedTime] = useState("");
+  // Define state variable for the user input and converted time
+  const [time, setTime] = useState(""); // Stores the input time from the user
+  const [fromZone, setFromZone] = useState("US/Pacific"); // Default time zone to convert from
+  const [toZone, setToZone] = useState("Africa/Cairo"); // Default time zone to convert to
+  const [convertedTime, setConvertedTime] = useState(""); // Stores the results of the converted time
 
+  // Get a list of all available time zones from moment-timezone
   const timeZones = moment.tz.names();
 
+  // Function to convert time from one zone to another
   function convert() {
-    const m = moment.tz(time, fromZone)
-    setConvertedTime(m.tz(toZone).format('MM/DD/YYYY, h:mm:ss a'));
+    // Create a moment object with the user's input time and the selected "from" time zone
+    const m = moment.tz(time, fromZone);
+
+    // Convert the time to the selected time zone and format it
+    setConvertedTime(m.tz(toZone).format("MM/DD/YYYY, h:mm:ss a"));
   }
 
   return (
